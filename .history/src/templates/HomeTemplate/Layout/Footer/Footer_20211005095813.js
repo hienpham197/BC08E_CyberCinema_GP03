@@ -96,34 +96,9 @@ export default function Footer(props) {
           <hr />
         </div>
         <div className='footer__bottom'>
-          <div className='footer__bottom--item1'>
-            <img
-              src='https://tix.vn/app/assets/img/icons/zion-logo.jpg'
-              alt='zion'
-            />
-          </div>
-          <div className='footer__bottom--item2'>
-            <h3>CyberCinema – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</h3>
-            <p>
-              Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ
-              Chí Minh, Việt Nam.
-            </p>
-            <p>
-              Giấy chứng nhận đăng ký kinh doanh số: 0101659783, <br />
-              đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế
-              hoạch và đầu tư Thành phố Hồ Chí Minh cấp.
-            </p>
-            <p>Số Điện Thoại (Hotline): 1900 545 436</p>
-            <p>
-              Email: <a href='mailto:support@tix.vn'>support@tix.vn</a>
-            </p>
-          </div>
-          <div className='footer__bottom--item3'>
-            <img
-              src='https://s3img.vcdn.vn/123phim/2020/03/d1e6bd560daa9e20131ea8a0f62e87f8.png'
-              alt='Bộ Công Thương'
-            />
-          </div>
+          <div className='footer__bottom--item1'>1</div>
+          <div className='footer__bottom--item2'>2</div>
+          <div className='footer__bottom--item3'>3</div>
         </div>
       </div>
     </footer>

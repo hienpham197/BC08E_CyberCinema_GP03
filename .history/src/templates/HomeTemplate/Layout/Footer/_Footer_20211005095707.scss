@@ -14,11 +14,6 @@
         width: calc(100% / 3);
         margin-top: 2.5rem;
 
-        @include responsive(576) {
-          width: 50%;
-          margin-bottom: 2rem;
-        }
-
         h3 {
           color: $c-white;
         }
@@ -59,52 +54,11 @@
     }
 
     .footer__midle {
-      opacity: 0.4;
+      opacity: 0.5;
     }
 
     .footer__bottom {
-      display: flex;
-      flex-direction: row;
-      margin: 2rem 0 0 0;
-
-      .footer__bottom--item1 {
-        width: 15%;
-
-        img {
-          font-size: $fs-14;
-          border-radius: $fs-10;
-
-          width: $fs-80;
-          height: auto;
-        }
-      }
-
-      .footer__bottom--item2 {
-        width: 70%;
-
-        h3 {
-          color: $c-white;
-          opacity: 0.8;
-        }
-        p {
-          color: $c-grey;
-          margin: 0;
-        }
-        a {
-          text-decoration: none;
-          color: $c-red;
-        }
-      }
-
-      .footer__bottom--item3 {
-        width: 15%;
-
-        img {
-          width: 100%;
-        }
-      }
+      color: #fff;
     }
-  }
-  @media only screen and (width: 375px) and (height: 635px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
   }
 }

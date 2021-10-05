@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { history } from "../../../../App";
 import _ from "lodash";
 import { ACCESS_TOKEN, USER_LOGIN } from "../../../../util/setting";
-import "./_Header.scss";
 export default function Header(props) {
   const { userLogin } = useSelector((state) => state.QuanLyNguoiDungReducer);
   const renderLogin = () => {

@@ -14,11 +14,6 @@
         width: calc(100% / 3);
         margin-top: 2.5rem;
 
-        @include responsive(576) {
-          width: 50%;
-          margin-bottom: 2rem;
-        }
-
         h3 {
           color: $c-white;
         }
@@ -104,7 +99,5 @@
         }
       }
     }
-  }
-  @media only screen and (width: 375px) and (height: 635px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
   }
 }
