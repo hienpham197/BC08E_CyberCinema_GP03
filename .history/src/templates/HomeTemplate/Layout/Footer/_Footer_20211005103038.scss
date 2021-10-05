@@ -14,11 +14,6 @@
         width: calc(100% / 3);
         margin-top: 2.5rem;
 
-        @include responsive(576) {
-          width: 50%;
-          margin-bottom: 2rem;
-        }
-
         h3 {
           color: $c-white;
         }

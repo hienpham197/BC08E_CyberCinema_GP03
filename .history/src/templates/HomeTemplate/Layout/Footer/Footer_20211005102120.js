@@ -115,15 +115,10 @@ export default function Footer(props) {
             </p>
             <p>Số Điện Thoại (Hotline): 1900 545 436</p>
             <p>
-              Email: <a href='mailto:support@tix.vn'>support@tix.vn</a>
+              Email: <span>support@tix.vn</span>
             </p>
           </div>
-          <div className='footer__bottom--item3'>
-            <img
-              src='https://s3img.vcdn.vn/123phim/2020/03/d1e6bd560daa9e20131ea8a0f62e87f8.png'
-              alt='Bộ Công Thương'
-            />
-          </div>
+          <div className='footer__bottom--item3'>3</div>
         </div>
       </div>
     </footer>
