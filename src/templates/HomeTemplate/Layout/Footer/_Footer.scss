@@ -1,0 +1,60 @@
+@import "../../../../assets/scss/main.scss";
+.footer {
+  background: $c-black;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 25rem;
+
+    .footer__top {
+      display: flex;
+      flex-direction: row;
+      .footer__item {
+        width: calc(100% / 3);
+        margin-top: 2.5rem;
+
+        h3 {
+          color: $c-white;
+        }
+
+        .footer__partner {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+
+          a {
+            margin: 0 1.2rem 1.2rem 0;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+
+        .footer__contact {
+          .footer__app {
+            a {
+              display: inline-block;
+              margin-right: 1.2rem;
+
+              img {
+                width: 3.3rem;
+                height: 3.5rem;
+              }
+            }
+          }
+
+          .footer__social {
+            @extend .footer__app;
+            // Kế thừa thuộc tính của footer__app
+          }
+        }
+      }
+    }
+
+    .footer__bottom {
+      color: #fff;
+    }
+  }
+}
