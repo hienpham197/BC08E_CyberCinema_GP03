@@ -1,0 +1,389 @@
+@import "../../../../assets/scss/main.scss";
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding: 10px 0;
+  background-color: $dark-60;
+  z-index: 300;
+  transition: 0.3s;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      width: $fs-40;
+    }
+    &--nav {
+      display: flex;
+      color: $light;
+      transition: 0.3s;
+
+      font-size: $fs-14;
+      text-transform: uppercase;
+      font-family: $main-font-bold;
+
+      & > a {
+        display: block;
+        padding: 10px;
+        color: $light;
+        transition: 0.2s;
+
+        &:hover {
+          color: $orange-2;
+        }
+
+        @include responsive(992) {
+          padding: 1.5rem 0;
+          margin-bottom: 1rem;
+        }
+      }
+
+      /* custom button close menu on mobile */
+      span {
+        display: none;
+
+        @include responsive(992) {
+          position: fixed;
+          top: 3rem;
+          right: 3rem;
+          z-index: 3;
+
+          display: block;
+          font-size: $fs-30;
+          cursor: pointer;
+        }
+      }
+
+      /* custom button signin & signup on mobile*/
+      & > div {
+        display: none;
+
+        a {
+          padding: 1rem;
+          border: 2px solid $light;
+          border-radius: 5px;
+          min-width: 150px;
+          color: $light !important;
+
+          @include responsive(768) {
+            max-width: 150px;
+            margin-bottom: 2.5rem;
+          }
+        }
+
+        @include responsive(992) {
+          display: flex;
+          justify-content: space-evenly;
+          padding-top: 2rem;
+          margin-top: 2rem;
+        }
+
+        @include responsive(768) {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      /* Custom user info on mobile */
+      .navUserInfo {
+        position: relative;
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        width: 80%;
+        padding: 2rem 0;
+        margin: 0 auto 3rem;
+
+        color: $dark;
+        background-color: $light;
+        border-radius: 10px;
+
+        p {
+          font-size: $fs-18;
+          margin: 0;
+          text-transform: capitalize;
+        }
+
+        @include responsive(992) {
+          display: flex;
+        }
+
+        @include responsive(768) {
+          flex-direction: row;
+        }
+
+        .avatar {
+          position: relative;
+          width: 4.1rem;
+          height: 4.1rem;
+          margin: 0 0rem 0 1.5rem;
+
+          border-radius: 50%;
+          z-index: 1;
+
+          & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            -webkit-object-fit: cover;
+            border-radius: inherit;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+
+            background-image: linear-gradient(to right, $orange-1, $orange-3);
+            border-radius: inherit;
+            transform: scale(1.1);
+            z-index: -1;
+          }
+        }
+      }
+
+      .nav-active {
+        color: $orange-2;
+      }
+
+      @include responsive(992) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+
+        width: 60%;
+        transform: translateX(20%);
+        padding: 8rem 0;
+
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+
+        flex-direction: column;
+        font-size: $fs-18;
+        text-align: center;
+
+        box-shadow: -2px 0 15px $dark-30;
+        color: $light;
+        background: linear-gradient(to top, $orange-1, $orange-3);
+      }
+
+      @include responsive(576) {
+        width: 100%;
+      }
+    }
+
+    .nav-activeOnMobile {
+      @include responsive(992) {
+        transform: translateX(0%);
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+      }
+    }
+
+    &--signin {
+      .signup {
+        padding-right: $d-1;
+        margin-right: $d-1;
+
+        font-family: $main-font-bold;
+        font-size: $fs-12;
+        text-transform: uppercase;
+
+        border-right: 1px solid $light;
+        color: $light;
+        transition: 0.3s;
+
+        &:hover {
+          color: $orange-2;
+        }
+
+        @include responsive(992) {
+          display: none;
+        }
+      }
+
+      .signin {
+        font-size: $fs-12;
+      }
+
+      @include responsive(992) {
+        display: none;
+      }
+    }
+
+    &--info {
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: $light;
+
+      p {
+        font-size: $fs-16;
+        margin: 0;
+        text-transform: capitalize;
+      }
+
+      .avatar {
+        position: relative;
+        width: 4.1rem;
+        height: 4.1rem;
+        margin: 0 0rem 0 1.5rem;
+
+        border-radius: 50%;
+        z-index: 1;
+
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          -webkit-object-fit: cover;
+          border-radius: inherit;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+
+          background-image: linear-gradient(to right, $orange-1, $orange-3);
+          border-radius: inherit;
+          transform: scale(1.1);
+          z-index: -1;
+        }
+      }
+
+      /* arrowDown of antDesign  */
+      span {
+        font-size: $fs-18;
+        cursor: pointer;
+        padding: 1rem;
+        outline: none;
+      }
+
+      .submenu {
+        display: flex;
+        flex-direction: column;
+
+        position: absolute;
+        top: 4.8rem;
+        right: 0;
+
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+
+        width: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
+
+        box-shadow: 2px 4px 6px $dark-30;
+        background-color: $orange-4;
+        transition: 0.1s;
+
+        a {
+          padding: 4px 0;
+          margin-bottom: 5px;
+          transition: all 0.3s;
+
+          span {
+            color: $gray-2;
+            font-size: $fs-14;
+            font-family: $main-font-bold;
+          }
+
+          /* icon of antDesign  */
+          .anticon {
+            color: $orange-2;
+            font-size: $fs-18;
+          }
+
+          &:hover {
+            background-color: $orange-5;
+            color: $light;
+            border-radius: 7px;
+
+            span {
+              color: $light;
+            }
+
+            .anticon {
+              color: $light;
+            }
+          }
+        }
+
+        button {
+          display: flex;
+          align-items: center;
+
+          padding: 4px 0;
+          transition: all 0.3s;
+
+          /* icon of antDesign  */
+          .anticon {
+            color: $orange-2;
+            font-size: $fs-18;
+          }
+
+          span {
+            color: $gray-2;
+            font-size: $fs-14;
+            font-family: $main-font-bold;
+          }
+
+          &:hover {
+            background-color: $orange-5;
+            color: $light;
+            border-radius: 7px;
+
+            span {
+              color: $light;
+            }
+
+            .anticon {
+              color: $light;
+            }
+          }
+        }
+      }
+
+      .submenu-active {
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+      }
+
+      @include responsive(992) {
+        display: none;
+      }
+    }
+
+    &--toggle {
+      display: none !important;
+      font-size: $fs-24;
+      color: $light !important;
+
+      @include responsive(992) {
+        display: block !important;
+      }
+    }
+  }
+}
+
+.header-onScroll {
+  padding: 5px 0;
+}

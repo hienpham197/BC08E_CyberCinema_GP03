@@ -1,0 +1,201 @@
+.multipleRow {
+  /* Custom arrow next and prev*/
+  .slick-prev,
+  .slick-next {
+    width: auto;
+    height: auto;
+    top: 46%;
+  }
+
+  .slick-prev {
+    left: -50px;
+
+    @include responsive(1200) {
+      left: -15px;
+    }
+    @include responsive(1024) {
+      left: -15px;
+    }
+  }
+
+  .slick-next {
+    right: -50px;
+
+    @include responsive(1200) {
+      right: -15px;
+    }
+    @include responsive(1024) {
+      right: -15px;
+    }
+  }
+
+  .slick-prev:before {
+    transform: rotate(45deg);
+  }
+
+  .slick-next:before {
+    transform: rotate(225deg);
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: gray !important;
+    font-size: 3rem !important;
+    line-height: 0;
+    font-family: $main-font-bold;
+    content: "";
+
+    /* Shape of arrow*/
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+    float: left;
+    box-shadow: -3px 3px $orange-3;
+  }
+
+  /* Padding for each multipleRow__item */
+  &__wrapper {
+    padding: 1rem;
+  }
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      .multipleRow__item-bg {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
+    &-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+      z-index: 20;
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      transition: all 0.2s;
+      background: linear-gradient(to top, #000000, #00000000);
+
+      .btn-booking {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        padding: 7px 0;
+        width: 100%;
+        margin: 0 auto;
+
+        text-transform: uppercase;
+        text-align: center;
+        font-family: $main-font-bold;
+        font-size: $fs-16;
+        letter-spacing: 1px;
+
+        color: $light;
+        background-color: $red;
+        transition: 0.3s;
+      }
+
+      .btn-trailer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        font-size: $fs-40;
+        color: $light;
+        transform: translate(-50%, -50%);
+        transition: 0.3s;
+
+        svg {
+          width: 6rem;
+          height: 6rem;
+          opacity: 0.8;
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+
+    &-content {
+      img {
+        width: 100%;
+        height: 310px;
+        object-fit: cover;
+        border-radius: 10px;
+
+        @include responsive(768) {
+          height: 410px;
+        }
+
+        @include responsive(576) {
+          height: 310px;
+        }
+      }
+
+      p {
+        height: 50px;
+        margin: 5px 0 0 0;
+
+        font-size: $fs-16;
+        font-family: $main-font-bold;
+        text-transform: capitalize;
+        color: $dark;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+
+        .c-review__raiting {
+          padding: 0 3px;
+          margin-top: 0px;
+
+          display: inline-flex;
+          justify-content: center;
+          font-size: 1rem;
+        }
+      }
+
+      .c-review__score {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        padding: 4px;
+        margin: 0;
+        background-color: $dark-60;
+        border: none;
+
+        border-radius: 5px;
+        z-index: 19;
+
+        span {
+          line-height: 1;
+        }
+
+        span:last-of-type {
+          margin: 2px 0 0 0;
+          padding: 3px 5px;
+        }
+      }
+    }
+  }
+}
