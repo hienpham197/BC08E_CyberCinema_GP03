@@ -145,7 +145,7 @@ export default function AddUsers(props) {
             <Option value='QuanTri'>Quản Trị</Option>
           </Select>
         </Form.Item>
-        <button type='submit' className='btn__themnguoidung'>
+        <button type='submit' className='btn__themnguoiDung'>
           Thêm Người Dùng
         </button>
       </Form>

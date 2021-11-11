@@ -16,7 +16,7 @@ export default function Header(props) {
             onClick={() => {
               history.push("/login");
             }}
-            className='self-center px-8 py-3 rounded text-white d-flex'
+            className='self-center px-8 py-3 rounded text-white d-flex header__username'
           >
             Đăng Nhập
           </button>
@@ -31,7 +31,7 @@ export default function Header(props) {
           onClick={() => {
             history.push("/profile");
           }}
-          className='self-center px-8 py-3 rounded'
+          className='self-center px-8 py-3 rounded header__username'
         >
           Hello ! {userLogin.taiKhoan}
         </button>
@@ -42,7 +42,7 @@ export default function Header(props) {
             history.push("/home");
             window.location.reload();
           }}
-          className='text-yellow-500 mr-5'
+          className='mr-5 hover:text-gray-900 header__username'
         >
           Đăng xuất
         </button>
@@ -57,31 +57,32 @@ export default function Header(props) {
           aria-label='Back to homepage'
           className='flex items-center p-2'
         >
-          <img width={180} height={55} src={Logo} alt='MovieStar' />
+          <img width={200} src={Logo} alt='MovieStar' />
         </NavLink>
         <ul className='items-stretch hidden space-x-3 lg:flex'>
           <li className='flex'>
             <NavLink
               to='/home'
-              className='flex items-center -mb-0.5 px-4 dark:border-transparent dark:text-violet-400 dark:border-violet-400 text-white'
+              className='flex items-center -mb-0.5 px-4 dark:border-transparent dark:text-violet-400 dark:border-violet-400 text-white header__username'
               activeClassName='border-b-2'
             >
               Home
             </NavLink>
           </li>
           <li className='flex'>
-            <NavLink
+            <a
+              href='#footer'
               to='/contact'
-              className='flex items-center -mb-0.5 px-4 dark:border-transparent text-white'
+              className='flex items-center -mb-0.5 px-4 dark:border-transparent text-white header__username'
               activeClassName='border-b-2'
             >
               Contact
-            </NavLink>
+            </a>
           </li>
           <li className='flex'>
             <NavLink
               to='/news'
-              className='flex items-center -mb-0.5 px-4 dark:border-transparent text-white'
+              className='flex items-center -mb-0.5 px-4 dark:border-transparent text-white header__username'
               activeClassName='border-b-2'
             >
               News

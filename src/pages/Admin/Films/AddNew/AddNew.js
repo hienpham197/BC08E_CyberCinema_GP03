@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import "./_AddNew.scss";
+import "./_AddNew.scss";
 import { useDispatch } from "react-redux";
 import { useFormik } from "formik";
 import { Form, Input, Radio, DatePicker, InputNumber, Switch } from "antd";
