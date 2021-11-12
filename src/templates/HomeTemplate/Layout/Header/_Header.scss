@@ -1,9 +1,15 @@
+@import "../../../../assets/scss/main.scss";
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: #333;
+  font-size: $fs-16;
+
+  .container {
+    height: 60px;
+  }
 }
 
 .header__wrapper {
@@ -23,4 +29,10 @@
 .header__logo img {
   width: 100px;
   height: 80px;
+}
+
+.header__username {
+  color: $c-white;
+  font-weight: $fw-5;
+  font-size: $fs-16;
 }

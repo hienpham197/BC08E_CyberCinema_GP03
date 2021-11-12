@@ -1,11 +1,8 @@
 import React from "react";
 import "./_Footer.scss";
 import partNersLogo from "../../../../data/partNersLogo.json";
-import {
-  AndroidOutlined,
-  AppleOutlined,
-  FacebookOutlined,
-} from "@ant-design/icons";
+import ScrollButton from "../../../../components/BackToTop/ScrollButton";
+
 export default function Footer(props) {
   const renderPartners = () => {
     return partNersLogo.arrPartners.map((partNer, index) => {
@@ -26,11 +23,11 @@ export default function Footer(props) {
     });
   };
   return (
-    <footer className='footer'>
+    <footer id='footer' className='footer'>
       <div className='footer__wrapper'>
         <div className='footer__top'>
           <div className='footer__item'>
-            <h3>CyberCinema</h3>
+            <h3>MovieStar</h3>
             <ul>
               <li>
                 <a href=''>FAQ</a>
@@ -50,7 +47,7 @@ export default function Footer(props) {
             <h3>Đối tác</h3>
             <div className='footer__partner'>{renderPartners()}</div>
           </div>
-          <div className='footer__item'>
+          <div className='footer__item ml-3'>
             <div className='footer__contact'>
               <h3>Mobile App</h3>
               <div className='footer__app'>
@@ -74,7 +71,7 @@ export default function Footer(props) {
                   />
                 </a>
               </div>
-              <div className='footer__social'>
+              <div className='footer__social mt-3'>
                 <h3>Social</h3>
                 <a href='https://www.facebook.com/tix.vn/' target='_blank'>
                   <img
@@ -122,7 +119,9 @@ export default function Footer(props) {
             <img
               src='https://s3img.vcdn.vn/123phim/2020/03/d1e6bd560daa9e20131ea8a0f62e87f8.png'
               alt='Bộ Công Thương'
+              className='mb-3'
             />
+            <ScrollButton />
           </div>
         </div>
       </div>

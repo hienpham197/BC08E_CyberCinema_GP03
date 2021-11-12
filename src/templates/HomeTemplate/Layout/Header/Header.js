@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { history } from "../../../../App";
 import _ from "lodash";
 import { ACCESS_TOKEN, USER_LOGIN } from "../../../../util/setting";
+import Logo from "../../../../assets/images/logo/logo.svg";
 import "./_Header.scss";
 export default function Header(props) {
   const { userLogin } = useSelector((state) => state.QuanLyNguoiDungReducer);
@@ -15,19 +16,9 @@ export default function Header(props) {
             onClick={() => {
               history.push("/login");
             }}
-            className='self-center px-8 py-3 rounded'
+            className='self-center px-8 py-3 rounded text-white d-flex header__username'
           >
-            {/* {t("signin")} */}
-            Đăng nhập
-          </button>
-          <button
-            onClick={() => {
-              history.push("/register");
-            }}
-            className='self-center px-8 py-3 font-semibold rounded bg-violet-600 text-coolGray-50'
-          >
-            {/* {t("register")} */}
-            Đăng ký
+            Đăng Nhập
           </button>
         </Fragment>
       );
@@ -40,7 +31,7 @@ export default function Header(props) {
           onClick={() => {
             history.push("/profile");
           }}
-          className='self-center px-8 py-3 rounded'
+          className='self-center px-8 py-3 rounded header__username'
         >
           Hello ! {userLogin.taiKhoan}
         </button>
@@ -51,7 +42,7 @@ export default function Header(props) {
             history.push("/home");
             window.location.reload();
           }}
-          className='text-yellow-500 mr-5'
+          className='mr-5 hover:text-gray-900 header__username'
         >
           Đăng xuất
         </button>
@@ -60,42 +51,38 @@ export default function Header(props) {
   };
   return (
     <header className='bg-black bg-opacity-40 w-full fixed z-10'>
-      <nav className='container flex justify-between h-16 mx-auto'>
+      <nav className='container flex justify-between mx-auto'>
         <NavLink
           to='/'
           aria-label='Back to homepage'
           className='flex items-center p-2'
         >
-          <img
-            width={180}
-            height={55}
-            src='https://cybersoft.edu.vn/wp-content/uploads/2017/03/MIN-OP1.png'
-            alt='https://cybersoft.edu.vn/wp-content/uploads/2017/03/MIN-OP1.png'
-          />
+          <img width={200} src={Logo} alt='MovieStar' />
         </NavLink>
         <ul className='items-stretch hidden space-x-3 lg:flex'>
           <li className='flex'>
             <NavLink
               to='/home'
-              className='flex items-center -mb-0.5 px-4 dark:border-transparent dark:text-violet-400 dark:border-violet-400 text-white'
+              className='flex items-center -mb-0.5 px-4 dark:border-transparent dark:text-violet-400 dark:border-violet-400 text-white header__username'
               activeClassName='border-b-2'
             >
               Home
             </NavLink>
           </li>
           <li className='flex'>
-            <NavLink
+            <a
+              href='#footer'
               to='/contact'
-              className='flex items-center -mb-0.5 px-4 dark:border-transparent text-white'
+              className='flex items-center -mb-0.5 px-4 dark:border-transparent text-white header__username'
               activeClassName='border-b-2'
             >
               Contact
-            </NavLink>
+            </a>
           </li>
           <li className='flex'>
             <NavLink
               to='/news'
-              className='flex items-center -mb-0.5 px-4 dark:border-transparent text-white'
+              className='flex items-center -mb-0.5 px-4 dark:border-transparent text-white header__username'
               activeClassName='border-b-2'
             >
               News

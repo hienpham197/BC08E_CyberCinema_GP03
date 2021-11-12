@@ -5,7 +5,6 @@ import styleSlick from "./_MultipleRowSlick.module.scss";
 
 // import Film from "../Film/Film";
 import Film_Flip from "../Film/Film_Flip";
-import { QuanLyPhimReducer } from "../../redux/reducers/QuanLyPhimReducer/QuanLyPhimReducer";
 import {
   SET_PHIM_DANG_CHIEU,
   SET_PHIM_SAP_CHIEU,
@@ -40,7 +39,7 @@ export default function MultipleRowSlick(props) {
     (state) => state.QuanLyPhimReducer
   );
   const renderFilms = () => {
-    return arrFilms.slice(0, 12).map((item, index) => {
+    return arrFilms.map((item, index) => {
       return (
         <div className='mt-2' key={index}>
           <Film_Flip phim={item} />

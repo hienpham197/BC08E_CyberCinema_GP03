@@ -1,0 +1,23 @@
+.admin__logo {
+  text-transform: uppercase;
+  width: 4.5rem;
+  height: 4.5rem;
+  transform: translateY(-15px);
+
+  &__logo-char {
+    font-weight: 700;
+  }
+}
+.admin__dangxuat {
+  color: #fff;
+  font-weight: 500;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.admin__menu {
+  font-weight: 500;
+}
